@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - StratusEdge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 shadow-md">
+    <div class="flex items-center space-x-3">
+      <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
+    </div>
+    <a href="Main.html" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm">Home</a>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Contact us to explore more</h2>
+      <p class="text-lg mb-8">
+        Our team will engage with you to understand your goals, introduce you to StratusEdge, and determine whether our partnership would be the right fit.
+      </p>
+
+      <div class="text-left mb-12">
+        <p class="mb-4"><strong>EMAIL</strong><br><a href="mailto:info@stratusedge.net" class="text-blue-600">info@stratusedge.net</a></p>
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/stratusedge/new-meeting', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff' }); }</script>
+<!-- Calendly badge widget end -->
+
+<p class="mb-4"><strong>REACH OUT</strong><br>Leave a message below</p>
+      </div>
+
+      <form class="grid gap-4 text-left">
+        <input type="text" placeholder="Full Name" class="p-3 rounded border border-gray-300" required />
+        <input type="email" placeholder="Email Address" class="p-3 rounded border border-gray-300" required />
+        <input type="text" placeholder="Subject" class="p-3 rounded border border-gray-300" />
+        <textarea placeholder="Your Message" rows="5" class="p-3 rounded border border-gray-300" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white w-full hover:bg-blue-700 px-4 py-2 rounded">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © <span id="year"></span> StratusEdge LLC. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
