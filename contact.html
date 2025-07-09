@@ -7,16 +7,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
+<nav class="text-gray-400 font-bold text-lg px-6 py-2 fixed top-0 left-0 w-full z-50 bg-white shadow" style="font-family: 'Poppins', sans-serif;">
   <!-- Header -->
-  <header class="flex items-center justify-between px-6 py-4 shadow-md">
+  <header class="flex items-center justify-between px-6 py-4">
     <div class="flex items-center space-x-3">
-      <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
+	<a href="index.html">
+         <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
+	</a>
     </div>
-    <a href="Main.html" class="text-white bg-blue-600 hover:bg-blue-700 font-bold rounded px-4 py-2 text-sm">Home</a>
-  </header>
 
+    <ul class="flex items-center relative space-x-32">
+      <li><a href="offerings.html" class="hover:text-blue-600 transition">Offerings</a></li>
+      <li><a href="specialization.html" class="hover:text-blue-600 transition">Specialization</a></li>
+
+      <li class="relative">
+        <button onclick="toggleSubmenu()" class="hover:text-blue-600 transition flex items-center focus:outline-none">
+          About Us
+          <svg class="ml-2 h-4 w-4 text-gray-400 hover:text-blue-600 transition" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul id="aboutSubmenu" class="submenu hidden absolute bg-white border border-gray-100 rounded shadow-lg mt-2 z-10 text-left min-w-[180px] text-sm">
+          <li><a href="who-we-are.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Who We Are</a></li>
+          <li><a href="careers.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Careers</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold" style="font-family: 'Poppins', sans-serif;">Contact Us</a>
+  </header>
+</nav>
   <!-- Contact Section -->
-  <section class="py-20 px-6">
+  <section class="py-32 px-6">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-4">Contact us to explore more</h2>
       <p class="text-lg mb-8">
@@ -51,6 +74,10 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  function toggleSubmenu() {
+    const submenu = document.getElementById("aboutSubmenu");
+    submenu.classList.toggle("hidden");
+  }
   </script>
 </body>
 </html>
