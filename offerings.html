@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - StratusEdge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white pt-24">
+
+  <!-- Navigation Bar -->
+  <nav class="text-gray-400 font-bold text-lg px-6 py-2 fixed top-0 left-0 w-full z-50 bg-white shadow">
+    <header class="flex items-center justify-between px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <a href="index.html">
+          <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto" />
+        </a>
+      </div>
+
+      <ul class="flex items-center relative space-x-32">
+        <li><a href="offerings.html" class="hover:text-blue-600 transition">Offerings</a></li>
+        <li><a href="specialization.html" class="hover:text-blue-600 transition">Specialization</a></li>
+        <li class="relative">
+          <button onclick="toggleSubmenu()" class="hover:text-blue-600 transition flex items-center focus:outline-none">
+            About Us
+            <svg class="ml-2 h-4 w-4 text-gray-400 hover:text-blue-600 transition" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul id="aboutSubmenu" class="submenu hidden absolute bg-white border border-gray-100 rounded shadow-lg mt-2 z-10 text-left min-w-[180px] text-sm">
+            <li><a href="who-we-are.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Who We Are</a></li>
+            <li><a href="careers.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Careers</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold">Contact Us</a>
+    </header>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="px-6 py-16 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-extrabold mb-4 text-center">🚀 Our Services</h1>
+    <p class="text-lg font-semibold text-center mb-6">Empowering Your Growth with Talent-Driven Solutions</p>
+
+    <p class="mb-8">At StratusEdge, we specialize in elevating businesses through precision-driven talent strategies. Whether you're scaling your executive team or streamlining operational support offshore, we provide the insight, expertise, and reach to deliver results.</p>
+
+    <div class="space-y-10">
+      <div>
+        <h2 class="text-2xl font-bold mb-2">🧠 Executive & Non-Executive Search</h2>
+        <p class="font-semibold mb-2">Find the leaders who will shape your future.</p>
+        <p>We partner closely with you to identify high-impact individuals who align with your business vision and culture. From niche technical roles to executive leadership, our process ensures you hire with confidence and clarity.</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Deep industry networks across sectors</li>
+          <li>Customized candidate screening protocols</li>
+          <li>Culture and competency alignment</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2">🌍 Offshore Outsourcing Solutions</h2>
+        <p class="font-semibold mb-2">Maximize efficiency without compromising quality.</p>
+        <p>Our offshore teams act as a seamless extension of yours—reducing costs, accelerating timelines, and improving scalability.</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Flexible staffing structures</li>
+          <li>Transparent communication channels</li>
+          <li>Time zone-aligned workflows</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2">👥 Strategic Staffing</h2>
+        <p class="font-semibold mb-2">Agility meets precision.</p>
+        <p>We simplify the hiring lifecycle, ensuring you stay focused on growth while we manage sourcing, screening, and placement.</p>
+        <ul class="list-disc list-inside mt-2">
+          <li>Rapid deployment capability</li>
+          <li>Technical and cultural fit assessments</li>
+          <li>On-demand and project-based options</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-2">💼 Woman-Owned. Business-Focused.</h2>
+        <p>StratusEdge brings both diversity of thought and excellence of execution. Our commitment to equity, collaboration, and innovation drives every search we lead and every solution we build.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    © <span id="year"></span> StratusEdge LLC. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleSubmenu() {
+      const submenu = document.getElementById("aboutSubmenu");
+      submenu.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
