@@ -57,17 +57,19 @@
 <p class="mb-4"><strong>REACH OUT</strong><br>Leave a message below</p>
       </div>
 
-      <form class="grid gap-4 text-left">
-        <input type="text" placeholder="Full Name" class="p-3 rounded border border-gray-300" required />
-        <input type="email" placeholder="Email Address" class="p-3 rounded border border-gray-300" required />
-        <input type="text" placeholder="Subject" class="p-3 rounded border border-gray-300" />
-        <textarea placeholder="Your Message" rows="5" class="p-3 rounded border border-gray-300" required></textarea>
+      <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-4 text-left">
+	<input type="hidden" name="access_key" value="f2b793c7-bb75-4420-8860-c20884ab8df1">
+        <input type="text" placeholder="Full Name" name="Full Name" class="p-3 rounded border border-gray-300" required />
+        <input type="email" placeholder ="Email Address" name="Email Address" class="p-3 rounded border border-gray-300" required />
+        <input type="text" placeholder="Subject" name="Subject" class="p-3 rounded border border-gray-300" />
+        <textarea placeholder = "Your Message" name = "Your Message" rows="5" class="p-3 rounded border border-gray-300" required></textarea>
+	<input type="hidden" name="redirect" value="https://web3forms.com/success">
         <button type="submit" class="bg-blue-600 text-white w-full hover:bg-blue-700 px-4 py-2 rounded">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
+ <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 py-6">
     © <span id="year"></span> StratusEdge LLC. All rights reserved.
   </footer>
@@ -78,6 +80,6 @@
     const submenu = document.getElementById("aboutSubmenu");
     submenu.classList.toggle("hidden");
   }
-  </script>
+ </script>
 </body>
 </html>
