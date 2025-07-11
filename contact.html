@@ -7,19 +7,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
+<!-- Navigation -->
 <nav class="text-gray-400 font-bold text-lg px-6 py-2 fixed top-0 left-0 w-full z-50 bg-white shadow" style="font-family: 'Poppins', sans-serif;">
-  <!-- Header -->
-  <header class="flex items-center justify-between px-6 py-4">
+  <header class="flex flex-wrap items-center justify-between px-6 py-4">
     <div class="flex items-center space-x-3">
-	<a href="index.html">
-         <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
-	</a>
+      <a href="index.html">
+        <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
+      </a>
     </div>
 
-    <ul class="flex items-center relative space-x-32">
+    <ul class="flex flex-wrap items-center space-x-6 md:space-x-32">
       <li><a href="offerings.html" class="hover:text-blue-600 transition">Offerings</a></li>
       <li><a href="specialization.html" class="hover:text-blue-600 transition">Specialization</a></li>
-
       <li class="relative">
         <button onclick="toggleSubmenu()" class="hover:text-blue-600 transition flex items-center focus:outline-none">
           About Us
@@ -35,7 +34,7 @@
       </li>
     </ul>
 
-    <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold" style="font-family: 'Poppins', sans-serif;">Contact Us</a>
+    <a href="contact.html" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold" style="font-family: 'Poppins', sans-serif;">Contact Us</a>
   </header>
 </nav>
   <!-- Contact Section -->
