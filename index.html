@@ -7,19 +7,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
+
+<!-- Navigation -->
 <nav class="text-gray-400 font-bold text-lg px-6 py-2 fixed top-0 left-0 w-full z-50 bg-white shadow" style="font-family: 'Poppins', sans-serif;">
-  <!-- Header -->
-  <header class="flex items-center justify-between px-6 py-4">
+  <header class="flex flex-wrap items-center justify-between px-6 py-4">
     <div class="flex items-center space-x-3">
-	<a href="index.html">
-         <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
-	</a>
+      <a href="index.html">
+        <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
+      </a>
     </div>
 
-    <ul class="flex items-center relative space-x-32">
+    <ul class="flex flex-wrap items-center space-x-6 md:space-x-32">
       <li><a href="offerings.html" class="hover:text-blue-600 transition">Offerings</a></li>
       <li><a href="specialization.html" class="hover:text-blue-600 transition">Specialization</a></li>
-
       <li class="relative">
         <button onclick="toggleSubmenu()" class="hover:text-blue-600 transition flex items-center focus:outline-none">
           About Us
@@ -38,18 +38,14 @@
     <a href="contact.html" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold" style="font-family: 'Poppins', sans-serif;">Contact Us</a>
   </header>
 </nav>
-<!-- Hero Section -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-br from-blue-50 to-white">
-  <h1 class="text-5xl font-bold mb-6 max-w-3xl">Talent Solutions that Power Growth</h1>
-  
-  <h2 class="text-3xl font-bold mb-6 max-w-xl">
-    Let us manage your talent needs while you concentrate on business success.
-  </h2>
 
-  <p class="text-lg max-w-xl mb-6">
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-32 bg-gradient-to-br from-blue-50 to-white">
+  <h1 class="text-3xl md:text-5xl font-bold mb-6 max-w-3xl">Talent Solutions that Power Growth</h1>
+  <h2 class="text-xl md:text-3xl font-bold mb-6 max-w-xl">Let us manage your talent needs while you concentrate on business success.</h2>
+  <p class="text-base md:text-lg max-w-xl mb-6">
     <strong>StratusEdge</strong> is a woman-owned consulting firm specializing in executive and non-executive talent solutions across diverse industries. With a strategic, relationship-driven approach and a team of experienced professionals, we help businesses identify, attract, and retain high-impact talent.
   </p>
-
   <button onclick="window.location.href='contact.html'" class="text-white bg-blue-600 hover:bg-blue-700 rounded-2xl px-6 py-3 inline-flex items-center">
     Get Started Today
     <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -57,79 +53,68 @@
     </svg>
   </button>
 </section>
-  <!-- Services Section -->
-  <section class="py-20 bg-gray-50 px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold">Our Services</h2>
-      <p class="text-gray-600 mt-2">Comprehensive staffing solutions for your business needs</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="rounded-2xl shadow-md p-6 bg-white">
-        <h3 class="text-xl font-semibold mb-2">Executive Search</h3>
-        <p class="text-gray-600">We help you identify and attract senior leadership talent aligned with your vision.</p>
-      </div>
-      <div class="rounded-2xl shadow-md p-6 bg-white">
-        <h3 class="text-xl font-semibold mb-2">Non-Executive Hiring</h3>
-        <p class="text-gray-600">Scalable and efficient recruitment services across all functional roles.</p>
-      </div>
-      <div class="rounded-2xl shadow-md p-6 bg-white">
-        <h3 class="text-xl font-semibold mb-2">Offshore Staffing</h3>
-        <p class="text-gray-600">Cost-effective, flexible global talent solutions with U.S.-based reliability.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Why StratusEdge?</h2>
-      <img src="Logo.png" alt="StratusEdge Logo" class="mx-auto h-32 w-auto mb-6" />
-      <p class="text-gray-700 text-lg">
-        Backed by experienced professionals, advanced technologies, and deep industry insight, StratusEdge delivers top-tier candidates with the efficiency, precision, and reliability your business deserves.
-      </p>
+<!-- Services -->
+<section class="py-20 bg-gray-50 px-4 md:px-6">
+  <div class="text-center mb-12">
+    <h2 class="text-2xl md:text-3xl font-bold">Our Services</h2>
+    <p class="text-gray-600 mt-2">Comprehensive staffing solutions for your business needs</p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="rounded-2xl shadow-md p-6 bg-white">
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Executive Search</h3>
+      <p class="text-gray-600">We help you identify and attract senior leadership talent aligned with your vision.</p>
     </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="py-20 px-6 bg-blue-50">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Get in touch</h2>
-      <!-- <form class="grid gap-4 text-left"> -->
-      <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-4 text-left">
-	<input type="hidden" name="access_key" value="f2b793c7-bb75-4420-8860-c20884ab8df1">
-        <input type="text" name="name" placeholder="Full Name" required class="p-3 rounded border border-gray-300" />
-        <input type="email" name="email" placeholder="Email Address" required class="p-3 rounded border border-gray-300" />
-        <input type="text" name="company" placeholder="Company Name" class="p-3 rounded border border-gray-300" />
-        <textarea name="message" placeholder="How can we help you?" required rows="5" class="p-3 rounded border border-gray-300"></textarea>
-        <input type="hidden" name="redirect" value="https://web3forms.com/success">
-        <button type="submit" class="bg-blue-600 text-white w-full hover:bg-blue-700 px-4 py-2 rounded">Submit</button>
-      </form>
+    <div class="rounded-2xl shadow-md p-6 bg-white">
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Non-Executive Hiring</h3>
+      <p class="text-gray-600">Scalable and efficient recruitment services across all functional roles.</p>
     </div>
-  </section>
+    <div class="rounded-2xl shadow-md p-6 bg-white">
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Offshore Staffing</h3>
+      <p class="text-gray-600">Cost-effective, flexible global talent solutions with U.S.-based reliability.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6">
-    © <span id="year"></span> StratusEdge LLC. All rights reserved.
-  </footer>
+<!-- About Section -->
+<section class="py-20 px-4 md:px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Why StratusEdge?</h2>
+    <img src="Logo.png" alt="StratusEdge Logo" class="mx-auto h-32 w-auto mb-6" />
+    <p class="text-gray-700 text-base md:text-lg">
+      Backed by experienced professionals, advanced technologies, and deep industry insight, StratusEdge delivers top-tier candidates with the efficiency, precision, and reliability your business deserves.
+    </p>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- Contact Form -->
+<section class="py-20 px-4 md:px-6 bg-blue-50">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Get in touch</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-4 text-left">
+      <input type="hidden" name="access_key" value="f2b793c7-bb75-4420-8860-c20884ab8df1">
+      <input type="text" name="name" placeholder="Full Name" required class="p-3 rounded border border-gray-300" />
+      <input type="email" name="email" placeholder="Email Address" required class="p-3 rounded border border-gray-300" />
+      <input type="text" name="company" placeholder="Company Name" class="p-3 rounded border border-gray-300" />
+      <textarea name="message" placeholder="How can we help you?" required rows="5" class="p-3 rounded border border-gray-300"></textarea>
+      <input type="hidden" name="redirect" value="https://web3forms.com/success">
+      <button type="submit" class="bg-blue-600 text-white w-full hover:bg-blue-700 px-4 py-2 rounded">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center text-sm text-gray-500 py-6">
+  © <span id="year"></span> StratusEdge LLC. All rights reserved.
+</footer>
+
+<!-- Scripts -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
   function toggleSubmenu() {
     const submenu = document.getElementById("aboutSubmenu");
     submenu.classList.toggle("hidden");
   }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname;
-    const navLinks = document.querySelectorAll("nav a");
-
-    navLinks.forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("text-blue-600"); // Highlight color
-      }
-    });
-  });
-
-  </script>
+</script>
 </body>
 </html>
