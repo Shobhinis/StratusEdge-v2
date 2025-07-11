@@ -95,13 +95,13 @@
     <div class="max-w-2xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Get in touch</h2>
       <!-- <form class="grid gap-4 text-left"> -->
-      <form action="https://formspree.io/f/mrbknllj" method="POST" class="grid gap-4 text-left">
-        <input type="text" placeholder="Full Name" class="p-3 rounded border border-gray-300" required />
-        <input type="email" placeholder="Email Address" class="p-3 rounded border border-gray-300" required />
-        <input type="text" placeholder="Company Name" class="p-3 rounded border border-gray-300" />
-        <textarea placeholder="How can we help you?" rows="5" class="p-3 rounded border border-gray-300" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white w-full hover:bg-blue-700 px-4 py-2 rounded">Submit</button>
-      </form>
+<form id="contact-form" class="grid gap-4 text-left">
+  <input type="text" name="name" placeholder="Full Name" required class="p-3 rounded border border-gray-300" />
+  <input type="email" name="email" placeholder="Email Address" required class="p-3 rounded border border-gray-300" />
+  <input type="text" name="company" placeholder="Company Name" class="p-3 rounded border border-gray-300" />
+  <textarea name="message" placeholder="How can we help you?" required rows="5" class="p-3 rounded border border-gray-300"></textarea>
+  <button type="submit" class="bg-blue-600 text-white w-full hover:bg-blue-700 px-4 py-2 rounded">Submit</button>
+</form>
     </div>
   </section>
 
@@ -127,6 +127,30 @@
       }
     });
   });
+
+document.getElementById("contact-form").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  const response = await fetch("https://formspree.io/f/mrbknllj", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (response.ok) {
+    alert("Message sent successfully!");
+    form.reset();
+  } else {
+    alert("Failed to send message. Please try again.");
+  }
+});
   </script>
 </body>
 </html>
