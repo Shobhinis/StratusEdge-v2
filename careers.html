@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
-<!-- Navigation -->
+<!-- ── NAVIGATION ── -->
 <nav class="text-gray-400 font-bold text-lg px-6 py-2 fixed top-0 left-0 w-full z-50 bg-white shadow" style="font-family: 'Poppins', sans-serif;">
   <header class="flex flex-wrap items-center justify-between px-6 py-4">
     <div class="flex items-center space-x-3">
@@ -15,98 +15,403 @@
         <img src="Logo.png" alt="StratusEdge Logo" class="h-10 w-auto"/>
       </a>
     </div>
-<!-- Hamburger Button (Mobile) -->
-<div class="md:hidden flex justify-end p-4">
-  <button onclick="toggleMenu()" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
-  </button>
-</div>
-<!-- Navigation Menu -->
-<ul id="mainMenu" class="hidden flex-col space-y-4 p-4 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-48 md:p-0">
-  <li><a href="offerings.html" class="hover:text-blue-600 transition">Offerings</a></li>
-  <li><a href="specialization.html" class="hover:text-blue-600 transition">Specialization</a></li>
-  <li class="relative">
-    <button onclick="toggleSubmenu()" class="hover:text-blue-600 transition flex items-center focus:outline-none">
-      About Us
-      <svg class="ml-2 h-4 w-4 text-gray-400 hover:text-blue-600 transition" xmlns="http://www.w3.org/2000/svg" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
-    <ul id="aboutSubmenu" class="submenu hidden absolute bg-white border border-gray-100 rounded shadow-lg mt-2 z-10 text-left min-w-[180px] text-sm">
-      <li><a href="who-we-are.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Who We Are</a></li>
-      <li><a href="careers.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Careers</a></li>
+    <!-- Hamburger (Mobile) -->
+    <div class="md:hidden flex justify-end p-4">
+      <button onclick="toggleMenu()" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Nav Links -->
+    <ul id="mainMenu" class="hidden flex-col space-y-4 p-4 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-48 md:p-0">
+      <li><a href="offerings.html" class="hover:text-blue-600 transition">Offerings</a></li>
+      <li><a href="specialization.html" class="hover:text-blue-600 transition">Specialization</a></li>
+      <li class="relative">
+        <button onclick="toggleSubmenu()" class="hover:text-blue-600 transition flex items-center focus:outline-none">
+          About Us
+          <svg class="ml-2 h-4 w-4 text-gray-400 hover:text-blue-600 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <ul id="aboutSubmenu" class="submenu hidden absolute bg-white border border-gray-100 rounded shadow-lg mt-2 z-10 text-left min-w-[180px] text-sm">
+          <li><a href="who-we-are.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Who We Are</a></li>
+          <li><a href="careers.html" class="block px-4 py-2 text-blue-600 hover:bg-blue-50">Careers</a></li>
+        </ul>
+      </li>
     </ul>
-  </li>
-</ul>
-    <a href="contact.html" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold" style="font-family: 'Poppins', sans-serif;">Contact Us</a>
+    <a href="contact.html" class="text-white bg-blue-600 hover:bg-blue-700 rounded px-4 py-2 text-sm font-bold">Contact Us</a>
   </header>
 </nav>
-<section class="py-32 flex flex-col justify-center items-center text-center px-1 bg-gradient-to-br from-blue-50 to-white">
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="hero-tag">We're Hiring</span>
-      <span class="hero-count">5 open positions</span>
+
+<!-- ── HERO ── -->
+<section class="pt-36 pb-16 bg-gradient-to-br from-blue-50 to-white text-center px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <span class="bg-blue-600 text-white text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded">We're Hiring</span>
+      <span class="text-blue-500 text-sm font-medium">5 open positions</span>
     </div>
-    <h1>Build the future<br>of <em>talent.</em></h1>
-    <p class="hero-sub">We place exceptional people in exceptional roles. If you're ready to work at the intersection of quantitative finance, deep tech, and data — we want to hear from you.</p>
-    <div class="hero-stats">
-      <div class="stat"><span class="num">5</span><span class="lbl">Open Roles</span></div>
-      <div class="stat"><span class="num">3</span><span class="lbl">Departments</span></div>
-      <div class="stat"><span class="num">Global</span><span class="lbl">Locations</span></div>
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+      Build the future<br>of <span class="text-blue-600 italic">talent.</span>
+    </h1>
+    <p class="text-gray-500 text-base leading-relaxed max-w-xl mx-auto mb-10">
+      We place exceptional people in exceptional roles. If you're ready to work at the intersection of quantitative finance, deep tech, and data — we want to hear from you.
+    </p>
+    <div class="flex justify-center gap-10 flex-wrap">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-blue-600">5</div>
+        <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Open Roles</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-blue-600">3</div>
+        <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Departments</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-blue-600">Global</div>
+        <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Locations</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- FILTER BAR -->
-<div class="filters-bar">
+<!-- ── FILTER BAR ── -->
+<div class="filters-bar sticky top-[72px] z-40 shadow-sm">
   <button class="filter-btn active" data-filter="all">All Roles</button>
   <button class="filter-btn" data-filter="quantum">Quantum</button>
   <button class="filter-btn" data-filter="finance">Finance &amp; Markets</button>
   <button class="filter-btn" data-filter="tech">Technology</button>
   <button class="filter-btn" data-filter="data">Data &amp; IP</button>
 </div>
-</section>
 
-  <!-- Our Values Section -->
-  <section class="bg-blue-50 py-5 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8"></h2>
-      <p class="text-lg mb-6">We are always looking to meet incredible people. Send us your resume and let’s talk.</p>
-      <a href="mailto:careers@stratusedge.net" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition">
-        Contact Us
+<!-- ── JOB LISTINGS ── -->
+<section class="py-12 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-2xl font-bold text-gray-800">Open Positions</h2>
+      <span class="text-sm text-gray-400" id="resultCount">Showing 5 roles</span>
+    </div>
+
+    <div class="divide-y divide-gray-100 border border-gray-100 rounded-xl overflow-hidden shadow-sm" id="jobsList">
+
+      <!-- ── Role 1: Project Manager Quantum Computing ── -->
+      <div class="job-card-wrap bg-white" data-dept="quantum">
+        <div class="job-row flex items-center justify-between px-6 py-5 hover:bg-blue-50 cursor-pointer transition" onclick="toggleDetail('role1')">
+          <div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Quantum Computing</span>
+              <span class="text-gray-300 text-xs">·</span>
+              <span class="text-xs text-gray-400">Remote / Hybrid</span>
+            </div>
+            <div class="text-lg font-semibold text-gray-900">Project Manager — Quantum Computing</div>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="bg-green-50 text-green-700 text-xs px-2 py-0.5 rounded font-medium">New</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Full-time</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Senior</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Program Management</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 ml-4 shrink-0">
+            <span class="hidden sm:inline text-xs text-gray-400">Full-time</span>
+            <span class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1">View <span class="apply-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="job-detail bg-blue-50 border-t border-blue-100 px-6 py-6" id="role1">
+          <div class="grid md:grid-cols-2 gap-6 mb-5">
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What You'll Do</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Lead end-to-end delivery of quantum computing R&amp;D programs</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Coordinate cross-functional teams across hardware, software, and theory</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Manage timelines, budgets, and stakeholder communications</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Track milestones across qubit development or algorithm deployment</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Translate technical progress into executive-level reporting</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What We're Looking For</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>5+ years project management in deep tech or R&amp;D environments</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Background in physics, computer science, or engineering preferred</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Experience with quantum hardware or QIS research teams</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>PMP or equivalent certification a plus</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Strong stakeholder management and communication skills</li>
+              </ul>
+            </div>
+          </div>
+          <a href="apply.html?role=Project+Manager+Quantum+Computing" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Apply for This Role →</a>
+        </div>
+      </div>
+
+      <!-- ── Role 2: Sr Analyst QIS ── -->
+      <div class="job-card-wrap bg-white" data-dept="quantum">
+        <div class="job-row flex items-center justify-between px-6 py-5 hover:bg-blue-50 cursor-pointer transition" onclick="toggleDetail('role2')">
+          <div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Quantum Information Science</span>
+              <span class="text-gray-300 text-xs">·</span>
+              <span class="text-xs text-gray-400">Remote / On-site</span>
+            </div>
+            <div class="text-lg font-semibold text-gray-900">Senior Analyst — Quantum Information Science (QIS)</div>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="bg-red-50 text-red-600 text-xs px-2 py-0.5 rounded font-medium">Hot</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Full-time</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Senior IC</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Research</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 ml-4 shrink-0">
+            <span class="hidden sm:inline text-xs text-gray-400">Full-time</span>
+            <span class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1">View <span class="apply-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="job-detail bg-blue-50 border-t border-blue-100 px-6 py-6" id="role2">
+          <div class="grid md:grid-cols-2 gap-6 mb-5">
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What You'll Do</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Conduct advanced research in quantum information science and cryptography</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Analyze and model quantum algorithms for practical applications</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Publish findings and contribute to IP portfolio development</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Collaborate with engineering teams to bridge theory and implementation</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Evaluate quantum hardware performance and noise characteristics</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What We're Looking For</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>PhD or Master's in Physics, Mathematics, or Quantum Engineering</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>3+ years research experience in QIS, quantum optics, or related field</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Proficiency in Qiskit, Cirq, or equivalent quantum frameworks</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Strong publication record or equivalent industry output</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Experience with error correction codes and circuit simulation</li>
+              </ul>
+            </div>
+          </div>
+          <a href="apply.html?role=Sr+Analyst+QIS" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Apply for This Role →</a>
+        </div>
+      </div>
+
+      <!-- ── Role 3: Analyst Market ── -->
+      <div class="job-card-wrap bg-white" data-dept="finance">
+        <div class="job-row flex items-center justify-between px-6 py-5 hover:bg-blue-50 cursor-pointer transition" onclick="toggleDetail('role3')">
+          <div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Finance &amp; Markets</span>
+              <span class="text-gray-300 text-xs">·</span>
+              <span class="text-xs text-gray-400">New York / Remote</span>
+            </div>
+            <div class="text-lg font-semibold text-gray-900">Analyst — Market Research</div>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="bg-green-50 text-green-700 text-xs px-2 py-0.5 rounded font-medium">New</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Full-time</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Mid-level</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Markets</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 ml-4 shrink-0">
+            <span class="hidden sm:inline text-xs text-gray-400">Full-time</span>
+            <span class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1">View <span class="apply-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="job-detail bg-blue-50 border-t border-blue-100 px-6 py-6" id="role3">
+          <div class="grid md:grid-cols-2 gap-6 mb-5">
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What You'll Do</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Conduct quantitative and qualitative market analysis across sectors</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Build financial models and valuation frameworks</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Track macroeconomic trends and produce intelligence reports</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Support portfolio construction and risk assessment workflows</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Present findings to senior analysts and portfolio managers</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What We're Looking For</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Bachelor's or Master's in Finance, Economics, or related field</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>2+ years in equity research, asset management, or consulting</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Strong command of Excel, Python or R for data analysis</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>CFA Level I candidate or above preferred</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Excellent written communication and presentation skills</li>
+              </ul>
+            </div>
+          </div>
+          <a href="apply.html?role=Analyst+Market" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Apply for This Role →</a>
+        </div>
+      </div>
+
+      <!-- ── Role 4: Patent / Data Analyst ── -->
+      <div class="job-card-wrap bg-white" data-dept="data">
+        <div class="job-row flex items-center justify-between px-6 py-5 hover:bg-blue-50 cursor-pointer transition" onclick="toggleDetail('role4')">
+          <div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Data &amp; Intellectual Property</span>
+              <span class="text-gray-300 text-xs">·</span>
+              <span class="text-xs text-gray-400">Remote / Flexible</span>
+            </div>
+            <div class="text-lg font-semibold text-gray-900">Patent / Data Analyst</div>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Full-time</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Mid-level</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">IP</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Analytics</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 ml-4 shrink-0">
+            <span class="hidden sm:inline text-xs text-gray-400">Full-time</span>
+            <span class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1">View <span class="apply-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="job-detail bg-blue-50 border-t border-blue-100 px-6 py-6" id="role4">
+          <div class="grid md:grid-cols-2 gap-6 mb-5">
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What You'll Do</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Search, analyze, and synthesize patent landscapes across tech domains</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Identify prior art, freedom-to-operate risks, and IP opportunities</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Build dashboards and pipelines for patent portfolio monitoring</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Collaborate with legal and R&amp;D teams on IP strategy</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Prepare detailed prior art and competitive intelligence reports</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What We're Looking For</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Background in science, engineering, or computer science</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>2+ years in patent analysis, IP consulting, or tech transfer</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Familiarity with USPTO, EPO, Derwent, or Lens.org</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Proficient in SQL, Python, or data visualization tools</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Detail-oriented with strong technical writing skills</li>
+              </ul>
+            </div>
+          </div>
+          <a href="apply.html?role=Patent+Data+Analyst" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Apply for This Role →</a>
+        </div>
+      </div>
+
+      <!-- ── Role 5: C++ Developer HFT ── -->
+      <div class="job-card-wrap bg-white" data-dept="tech">
+        <div class="job-row flex items-center justify-between px-6 py-5 hover:bg-blue-50 cursor-pointer transition" onclick="toggleDetail('role5')">
+          <div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Technology — HFT</span>
+              <span class="text-gray-300 text-xs">·</span>
+              <span class="text-xs text-gray-400">New York / Chicago</span>
+            </div>
+            <div class="text-lg font-semibold text-gray-900">C++ Developer — High-Frequency Trading</div>
+            <div class="flex gap-2 mt-2 flex-wrap">
+              <span class="bg-red-50 text-red-600 text-xs px-2 py-0.5 rounded font-medium">Hot</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Full-time</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Senior</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">C++</span>
+              <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">Low Latency</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 ml-4 shrink-0">
+            <span class="hidden sm:inline text-xs text-gray-400">Full-time</span>
+            <span class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded transition flex items-center gap-1">View <span class="apply-arrow">→</span></span>
+          </div>
+        </div>
+        <div class="job-detail bg-blue-50 border-t border-blue-100 px-6 py-6" id="role5">
+          <div class="grid md:grid-cols-2 gap-6 mb-5">
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What You'll Do</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Design and optimize ultra-low latency trading systems in C++17/20</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Build high-throughput order management and execution engines</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Profile and tune kernel bypass networking (DPDK, RDMA, Solarflare)</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Work with quants to implement and productionize trading algorithms</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Conduct code reviews and mentor junior developers</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xs font-semibold text-blue-700 uppercase tracking-wider mb-3">What We're Looking For</h4>
+              <ul class="space-y-2">
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>5+ years C++ development with low-latency expertise</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Deep knowledge of lock-free data structures and memory models</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Experience with FIX/FAST protocol, co-location, market data feeds</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Strong understanding of Linux kernel internals and CPU architecture</li>
+                <li class="text-sm text-gray-700 flex gap-2"><span class="text-blue-400 shrink-0">—</span>Prior HFT, prop trading, or market-making firm experience preferred</li>
+              </ul>
+            </div>
+          </div>
+          <a href="apply.html?role=C%2B%2B+Developer+HFT" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg transition">Apply for This Role →</a>
+        </div>
+      </div>
+
+    </div><!-- /jobsList -->
+
+    <!-- ── Open Application CTA ── -->
+    <div class="mt-8 bg-blue-700 rounded-xl px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-5">
+      <div>
+        <h3 class="text-white text-lg font-bold mb-1">Don't see the right fit?</h3>
+        <p class="text-blue-200 text-sm leading-relaxed max-w-md">We're always looking to meet incredible people. Send us your profile and we'll reach out when a matching role opens up.</p>
+      </div>
+      <a href="apply.html?role=General+Application" class="shrink-0 bg-white text-blue-700 hover:bg-blue-50 font-semibold text-sm px-6 py-3 rounded-lg transition whitespace-nowrap">
+        Submit Open Application
       </a>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6">
-    © <span id="year"></span> StratusEdge LLC. All rights reserved.
-  </footer>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  function toggleSubmenu() {
-    const submenu = document.getElementById("aboutSubmenu");
-    submenu.classList.toggle("hidden");
-  }
+<!-- ── FOOTER ── -->
+<footer class="text-center text-sm text-gray-500 py-6 border-t border-gray-100">
+  © <span id="year"></span> StratusEdge LLC. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
   function toggleMenu() {
-    const menu = document.getElementById('mainMenu');
-    menu.classList.toggle('hidden');
+    document.getElementById('mainMenu').classList.toggle('hidden');
   }
 
   function toggleSubmenu() {
-    const submenu = document.getElementById('aboutSubmenu');
-    submenu.classList.toggle('hidden');
+    document.getElementById('aboutSubmenu').classList.toggle('hidden');
   }
 
-  </script>
+  // Close submenu when clicking outside
+  document.addEventListener('click', (e) => {
+    const submenu = document.getElementById('aboutSubmenu');
+    if (!e.target.closest('li.relative')) {
+      submenu.classList.add('hidden');
+    }
+  });
+
+  // ── Toggle job detail ──────────────────────────────────────────────────────
+  function toggleDetail(id) {
+    const detail = document.getElementById(id);
+    const isOpen = detail.classList.contains('open');
+    document.querySelectorAll('.job-detail').forEach(d => d.classList.remove('open'));
+    if (!isOpen) detail.classList.add('open');
+  }
+
+  // ── Filter tabs ────────────────────────────────────────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      const cards  = document.querySelectorAll('.job-card-wrap');
+      let visible  = 0;
+
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.dept === filter;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+
+      document.getElementById('resultCount').textContent =
+        `Showing ${visible} role${visible !== 1 ? 's' : ''}`;
+
+      document.querySelectorAll('.job-detail').forEach(d => d.classList.remove('open'));
+    });
+  });
+</script>
 </body>
 </html>
+
 
